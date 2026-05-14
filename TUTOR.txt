@@ -1,0 +1,7 @@
+1. Buka BotWhatsAppDigiflazz&Tokopay.zip nya
+2. Masuk ke Setting dan pilih Config
+3. Isi Nomor HP, Data Digiflazz dan Payment Gatewaynya (TokoPay)
+4. Upload BotWhatsAppDigiflazz&Tokopay.zip nya ke panel dan ekstrak
+5. Upload file zip node_modules.zip ke panal dan ekstrak nanti akan muncul folder node_modules
+6. Upload file zip Module1 dan Module2 ke dalam folder node_modules dan ekstrak ke dua file zip itu
+7. Jika sudah start panelnya dan scan QR untuk mengkoneksikan bot nya ke WhatsApp
