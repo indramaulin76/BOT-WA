@@ -6564,7 +6564,6 @@ const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik
 > ${prefix}gbbp - Jasa GB Battle Pass (Point Blank)
 
 ✦ *Menu Sistem* ✦
-> ${prefix}listlainnya - Menu Tambahan (Game Lain)
 > ${prefix}dashboard - Dashboard Akun Anda
 > ${prefix}upgrade - Upgrade Akun VIP
 > ${prefix}owner - Kontak Owner / CS
@@ -7170,7 +7169,7 @@ case 'p': case 'proses': {
 	if (!isGroup) {
         if (isBanned) return;
         const usedPrefix = prefix || '.';
-        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Layanan Point Blank* ✦\n> ${usedPrefix}listtopup - List Harga Cash PB\n> ${usedPrefix}listakunpb - Daftar Akun PB Ready\n> ${usedPrefix}gbexp - Jasa GB EXP (Point Blank)\n> ${usedPrefix}gbkill - Jasa GB Kill (Point Blank)\n> ${usedPrefix}gbbp - Jasa GB Battle Pass (Point Blank)\n\n✦ *Menu Sistem* ✦\n> ${usedPrefix}listlainnya - Menu Tambahan (Game Lain)\n> ${usedPrefix}dashboard - Dashboard Akun Anda\n> ${usedPrefix}upgrade - Upgrade Akun VIP\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
+        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Layanan Point Blank* ✦\n> ${usedPrefix}listtopup - List Harga Cash PB\n> ${usedPrefix}listakunpb - Daftar Akun PB Ready\n> ${usedPrefix}gbexp - Jasa GB EXP (Point Blank)\n> ${usedPrefix}gbkill - Jasa GB Kill (Point Blank)\n> ${usedPrefix}gbbp - Jasa GB Battle Pass (Point Blank)\n\n✦ *Menu Sistem* ✦\n> ${usedPrefix}dashboard - Dashboard Akun Anda\n> ${usedPrefix}upgrade - Upgrade Akun VIP\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
         return client.sendMessage(m.chat, {caption: menuText, image: {url: "./gambar/bot.webp"} }, {quoted: m});
     }
 	if (!isAdmins) return m.reply(mess.admin)
@@ -7183,7 +7182,7 @@ case 'd': case 'done': {
 	if (!isGroup) {
         if (isBanned) return;
         const usedPrefix = prefix || '.';
-        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Layanan Point Blank* ✦\n> ${usedPrefix}listtopup - List Harga Cash PB\n> ${usedPrefix}listakunpb - Daftar Akun PB Ready\n> ${usedPrefix}gbexp - Jasa GB EXP (Point Blank)\n> ${usedPrefix}gbkill - Jasa GB Kill (Point Blank)\n> ${usedPrefix}gbbp - Jasa GB Battle Pass (Point Blank)\n\n✦ *Menu Sistem* ✦\n> ${usedPrefix}listlainnya - Menu Tambahan (Game Lain)\n> ${usedPrefix}dashboard - Dashboard Akun Anda\n> ${usedPrefix}upgrade - Upgrade Akun VIP\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
+        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Layanan Point Blank* ✦\n> ${usedPrefix}listtopup - List Harga Cash PB\n> ${usedPrefix}listakunpb - Daftar Akun PB Ready\n> ${usedPrefix}gbexp - Jasa GB EXP (Point Blank)\n> ${usedPrefix}gbkill - Jasa GB Kill (Point Blank)\n> ${usedPrefix}gbbp - Jasa GB Battle Pass (Point Blank)\n\n✦ *Menu Sistem* ✦\n> ${usedPrefix}dashboard - Dashboard Akun Anda\n> ${usedPrefix}upgrade - Upgrade Akun VIP\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
         return client.sendMessage(m.chat, {caption: menuText, image: {url: "./gambar/bot.webp"} }, {quoted: m});
     }
 	if (!isAdmins) return m.reply(mess.admin)
@@ -7452,65 +7451,75 @@ Hubungi admin untuk melihat screenshot lengkap akun.
 
 case 'gbexp': {
     if (isBanned) return m.reply(`*You Have Been Banned*`);
-    const infoGbExp = `⚡ *JASA GB EXP POINT BLANK* ⚡
+    const infoGbExp = `⚡ *GB EXP+POINT CHAR / AKUN* ⚡
 ━━━━━━━━━━━━━━━━━━━━
-*[SEGERA ISI HARGA DI SINI]*
+🔵 *GB BUNDIR*
+> 1 JUTA EXP ➜ *Rp 10.000*
+> 2 JUTA EXP ➜ *Rp 18.000*
+> 3 JUTA EXP ➜ *Rp 28.000*
+> 5 JUTA EXP ➜ *Rp 40.000*
+> 10 JUTA EXP ➜ *Rp 80.000*
+> 20 JUTA EXP ➜ *Rp 150.000*
+> 50 JUTA EXP ➜ *Rp 350.000*
+> 100 JUTA EXP ➜ *Rp 700.000*
+📌 _1 Juta EXP dapet 400-600.000 Point_
+📌 _GB Full 24 Jam_
 
-Contoh format:
-> 💠 1 Juta EXP = *Rp XX.XXX*
-> 💠 5 Juta EXP = *Rp XX.XXX*
-> 💠 10 Juta EXP = *Rp XXX.XXX*
-> 💠 Custom = *Hubungi Admin*
+🟣 *GB GLAS*
+> 1 JUTA EXP ➜ *Rp 15.000*
+> 2 JUTA EXP ➜ *Rp 28.000*
+> 3 JUTA EXP ➜ *Rp 40.000*
+> 5 JUTA EXP ➜ *Rp 50.000*
+> 10 JUTA EXP ➜ *Rp 100.000*
+> 20 JUTA EXP ➜ *Rp 200.000*
+> 50 JUTA EXP ➜ *Rp 500.000*
+> 100 JUTA EXP ➜ *Rp 800.000*
+📌 _KDA tidak berubah_
+📌 _Wajib Premium_
+📌 _1 Juta EXP dapet 400-600.000 Point_
+📌 _GB Full 24 Jam_
 ━━━━━━━━━━━━━━━━━━━━
-📌 *Cara Order:*
-Hubungi admin dengan format:
-*GBEXP [Jumlah EXP] [ID PB]*
+⏳ *Order GB EXP Start 2-4 Hari*
 
-📞 *Kontak Admin:*
-> wa.me/6281511132181`;
+🟡 *GB TITLE*
+> GB 1 Master Medal ➜ *Rp 1.000*
+> GB Ful Title ➜ *Rp 30.000* _(Harus ada Point 800.000)_
+> GB Ful Title+Point ➜ *Rp 40.000*
+━━━━━━━━━━━━━━━━━━━━
+📞 *Kontak Admin:* wa.me/6281511132181`;
     m.reply(infoGbExp);
     break;
 };
 
 case 'gbkill': {
     if (isBanned) return m.reply(`*You Have Been Banned*`);
-    const infoGbKill = `⚡ *JASA GB KILL POINT BLANK* ⚡
+    const infoGbKill = `⚔️ *GB KILL POINT BLANK* ⚔️
 ━━━━━━━━━━━━━━━━━━━━
-*[SEGERA ISI HARGA DI SINI]*
-
-Contoh format:
-> 💠 10.000 Kill = *Rp XX.XXX*
-> 💠 50.000 Kill = *Rp XX.XXX*
-> 💠 100.000 Kill = *Rp XXX.XXX*
-> 💠 Custom = *Hubungi Admin*
+> 50.000 Kill ➜ *Rp 75.000*
+> 100.000 Kill ➜ *Rp 150.000*
+📌 _Minimal D1_
 ━━━━━━━━━━━━━━━━━━━━
-📌 *Cara Order:*
-Hubungi admin dengan format:
-*GBKILL [Jumlah Kill] [ID PB]*
+⚠️ *Ragu? Bisa verifikasi akun terlebih dahulu.*
+_Jika ada masalah akun ganti PW, pasti bukan kami._
 
-📞 *Kontak Admin:*
-> wa.me/6281511132181`;
+📞 *Kontak Admin:* wa.me/6281511132181`;
     m.reply(infoGbKill);
     break;
 };
 
 case 'gbbp': {
     if (isBanned) return m.reply(`*You Have Been Banned*`);
-    const infoGbBP = `⚡ *JASA GB BATTLE PASS POINT BLANK* ⚡
+    const infoGbBP = `🏆 *GB BATTLE PASS POINT BLANK* 🏆
 ━━━━━━━━━━━━━━━━━━━━
-*[SEGERA ISI HARGA DI SINI]*
-
-Contoh format:
-> 💠 Level 1 - Max = *Rp XXX.XXX*
-> 💠 Per 10 Level = *Rp XX.XXX*
-> 💠 Custom = *Hubungi Admin*
+> GB T-M1 ➜ *Rp 40.000*
+> GB T-B1 ➜ *Rp 100.000*
+> GB M1-B1 ➜ *Rp 80.000*
+> GB T/M1/B1-B5 ➜ *Rp 750.000*
 ━━━━━━━━━━━━━━━━━━━━
-📌 *Cara Order:*
-Hubungi admin dengan format:
-*GBBP [Jumlah Level] [ID PB]*
+⚠️ *Ragu? Bisa verifikasi akun terlebih dahulu.*
+_Jika ada masalah akun ganti PW, pasti bukan kami._
 
-📞 *Kontak Admin:*
-> wa.me/6281511132181`;
+📞 *Kontak Admin:* wa.me/6281511132181`;
     m.reply(infoGbBP);
     break;
 };
