@@ -6556,12 +6556,17 @@ const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik
 *Contoh : .listtopup*
 *Hanya tulis .listtopup tidak ada tambahan yang lainnya*
 
-✦ *Menu Utama* ✦
-> ${prefix}listtopup - List Harga Topup
-> ${prefix}daftarharga - Daftar Harga Topup
-> ${prefix}listlainnya - Menu Tambahan
-> ${prefix}dashboard - Dashboard Anda
-> ${prefix}upgrade - Upgrade Akun Anda
+✦ *Layanan Point Blank* ✦
+> ${prefix}listtopup - List Harga Cash PB
+> ${prefix}listakunpb - Daftar Akun PB Ready
+> ${prefix}gbexp - Jasa GB EXP (Point Blank)
+> ${prefix}gbkill - Jasa GB Kill (Point Blank)
+> ${prefix}gbbp - Jasa GB Battle Pass (Point Blank)
+
+✦ *Menu Sistem* ✦
+> ${prefix}listlainnya - Menu Tambahan (Game Lain)
+> ${prefix}dashboard - Dashboard Akun Anda
+> ${prefix}upgrade - Upgrade Akun VIP
 > ${prefix}owner - Kontak Owner / CS
 
 ✦ *Bantuan* ✦
@@ -7165,7 +7170,7 @@ case 'p': case 'proses': {
 	if (!isGroup) {
         if (isBanned) return;
         const usedPrefix = prefix || '.';
-        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Menu Utama* ✦\n> ${usedPrefix}listtopup - List Harga Topup\n> ${usedPrefix}daftarharga - Daftar Harga Topup\n> ${usedPrefix}listlainnya - Menu Tambahan\n> ${usedPrefix}dashboard - Dashboard Anda\n> ${usedPrefix}upgrade - Upgrade Akun Anda\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
+        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Layanan Point Blank* ✦\n> ${usedPrefix}listtopup - List Harga Cash PB\n> ${usedPrefix}listakunpb - Daftar Akun PB Ready\n> ${usedPrefix}gbexp - Jasa GB EXP (Point Blank)\n> ${usedPrefix}gbkill - Jasa GB Kill (Point Blank)\n> ${usedPrefix}gbbp - Jasa GB Battle Pass (Point Blank)\n\n✦ *Menu Sistem* ✦\n> ${usedPrefix}listlainnya - Menu Tambahan (Game Lain)\n> ${usedPrefix}dashboard - Dashboard Akun Anda\n> ${usedPrefix}upgrade - Upgrade Akun VIP\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
         return client.sendMessage(m.chat, {caption: menuText, image: {url: "./gambar/bot.webp"} }, {quoted: m});
     }
 	if (!isAdmins) return m.reply(mess.admin)
@@ -7178,7 +7183,7 @@ case 'd': case 'done': {
 	if (!isGroup) {
         if (isBanned) return;
         const usedPrefix = prefix || '.';
-        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Menu Utama* ✦\n> ${usedPrefix}listtopup - List Harga Topup\n> ${usedPrefix}daftarharga - Daftar Harga Topup\n> ${usedPrefix}listlainnya - Menu Tambahan\n> ${usedPrefix}dashboard - Dashboard Anda\n> ${usedPrefix}upgrade - Upgrade Akun Anda\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
+        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Layanan Point Blank* ✦\n> ${usedPrefix}listtopup - List Harga Cash PB\n> ${usedPrefix}listakunpb - Daftar Akun PB Ready\n> ${usedPrefix}gbexp - Jasa GB EXP (Point Blank)\n> ${usedPrefix}gbkill - Jasa GB Kill (Point Blank)\n> ${usedPrefix}gbbp - Jasa GB Battle Pass (Point Blank)\n\n✦ *Menu Sistem* ✦\n> ${usedPrefix}listlainnya - Menu Tambahan (Game Lain)\n> ${usedPrefix}dashboard - Dashboard Akun Anda\n> ${usedPrefix}upgrade - Upgrade Akun VIP\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
         return client.sendMessage(m.chat, {caption: menuText, image: {url: "./gambar/bot.webp"} }, {quoted: m});
     }
 	if (!isAdmins) return m.reply(mess.admin)
@@ -7418,12 +7423,104 @@ client.sendMessage(m.chat, { caption: listPayment, image: linkQris});
 break;
 };                     
               
+// =============================================
+// FITUR POINT BLANK - AKUN & JASA GB
+// =============================================
+
+case 'listakunpb':
+case 'akunpb': {
+    if (isBanned) return m.reply(`*You Have Been Banned*`);
+    const listAkunPB = `🎮 *DAFTAR AKUN POINT BLANK READY* 🎮
+━━━━━━━━━━━━━━━━━━━━
+*[SEGERA ISI DAFTAR AKUN DI SINI]*
+
+Contoh format:
+> 1. Akun Bintang 5 Full Title - *Rp XXX.XXX*
+>    Spec: Level XX | BP XX | Skin XX
+>
+> 2. Akun Bintang 3 - *Rp XXX.XXX*
+>    Spec: Level XX | BP XX | Skin XX
+━━━━━━━━━━━━━━━━━━━━
+📌 *Cara Order Akun:*
+Hubungi admin untuk melihat screenshot lengkap akun.
+
+📞 *Kontak Admin:*
+> wa.me/6281511132181`;
+    m.reply(listAkunPB);
+    break;
+};
+
+case 'gbexp': {
+    if (isBanned) return m.reply(`*You Have Been Banned*`);
+    const infoGbExp = `⚡ *JASA GB EXP POINT BLANK* ⚡
+━━━━━━━━━━━━━━━━━━━━
+*[SEGERA ISI HARGA DI SINI]*
+
+Contoh format:
+> 💠 1 Juta EXP = *Rp XX.XXX*
+> 💠 5 Juta EXP = *Rp XX.XXX*
+> 💠 10 Juta EXP = *Rp XXX.XXX*
+> 💠 Custom = *Hubungi Admin*
+━━━━━━━━━━━━━━━━━━━━
+📌 *Cara Order:*
+Hubungi admin dengan format:
+*GBEXP [Jumlah EXP] [ID PB]*
+
+📞 *Kontak Admin:*
+> wa.me/6281511132181`;
+    m.reply(infoGbExp);
+    break;
+};
+
+case 'gbkill': {
+    if (isBanned) return m.reply(`*You Have Been Banned*`);
+    const infoGbKill = `⚡ *JASA GB KILL POINT BLANK* ⚡
+━━━━━━━━━━━━━━━━━━━━
+*[SEGERA ISI HARGA DI SINI]*
+
+Contoh format:
+> 💠 10.000 Kill = *Rp XX.XXX*
+> 💠 50.000 Kill = *Rp XX.XXX*
+> 💠 100.000 Kill = *Rp XXX.XXX*
+> 💠 Custom = *Hubungi Admin*
+━━━━━━━━━━━━━━━━━━━━
+📌 *Cara Order:*
+Hubungi admin dengan format:
+*GBKILL [Jumlah Kill] [ID PB]*
+
+📞 *Kontak Admin:*
+> wa.me/6281511132181`;
+    m.reply(infoGbKill);
+    break;
+};
+
+case 'gbbp': {
+    if (isBanned) return m.reply(`*You Have Been Banned*`);
+    const infoGbBP = `⚡ *JASA GB BATTLE PASS POINT BLANK* ⚡
+━━━━━━━━━━━━━━━━━━━━
+*[SEGERA ISI HARGA DI SINI]*
+
+Contoh format:
+> 💠 Level 1 - Max = *Rp XXX.XXX*
+> 💠 Per 10 Level = *Rp XX.XXX*
+> 💠 Custom = *Hubungi Admin*
+━━━━━━━━━━━━━━━━━━━━
+📌 *Cara Order:*
+Hubungi admin dengan format:
+*GBBP [Jumlah Level] [ID PB]*
+
+📞 *Kontak Admin:*
+> wa.me/6281511132181`;
+    m.reply(infoGbBP);
+    break;
+};
+
 // End Nambah Fitur              
 default: {
     if (!m.isGroup) {
         if (isBanned) return m.reply(`*You Have Been Banned*`);
         const usedPrefix = prefix || '.';
-        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Menu Utama* ✦\n> ${usedPrefix}listtopup - List Harga Topup\n> ${usedPrefix}daftarharga - Daftar Harga Topup\n> ${usedPrefix}listlainnya - Menu Tambahan\n> ${usedPrefix}dashboard - Dashboard Anda\n> ${usedPrefix}upgrade - Upgrade Akun Anda\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
+        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Layanan Point Blank* ✦\n> ${usedPrefix}listtopup - List Harga Cash PB\n> ${usedPrefix}listakunpb - Daftar Akun PB Ready\n> ${usedPrefix}gbexp - Jasa GB EXP (Point Blank)\n> ${usedPrefix}gbkill - Jasa GB Kill (Point Blank)\n> ${usedPrefix}gbbp - Jasa GB Battle Pass (Point Blank)\n\n✦ *Menu Sistem* ✦\n> ${usedPrefix}listlainnya - Menu Tambahan (Game Lain)\n> ${usedPrefix}dashboard - Dashboard Akun Anda\n> ${usedPrefix}upgrade - Upgrade Akun VIP\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
         client.sendMessage(m.chat, {caption: menuText, image: {url: "./gambar/bot.webp"} }, {quoted: m});
     }
     break;
