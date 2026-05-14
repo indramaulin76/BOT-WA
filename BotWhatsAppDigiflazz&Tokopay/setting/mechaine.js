@@ -3682,6 +3682,7 @@ case "setpb": {
   await m.reply(`_Sukses mengatur margin keuntungan produk Point Blank. Silahkan ketik *.listpb*_`);
   break;
 }
+case 'listtopup':
 case 'listpb':
 case 'pb': {
     if (isBanned) return m.reply(`*You Have Been Banned*`);
@@ -6590,6 +6591,7 @@ const textDashboard = `✦ *Menu Akun* ✦
 break;
 };
 
+case "daftarharga":
 case "listgame" : {
 m.reply(`*LIST HARGA TOPUP GAME*
 
