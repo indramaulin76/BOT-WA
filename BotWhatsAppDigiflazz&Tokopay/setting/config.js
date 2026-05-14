@@ -11,8 +11,9 @@ const axios = require('axios');
 
 
 
-// Data Owner
-global.owner = ["6285788134245", "6281511132181"];
+// Data Owner & Admin
+global.owner = ["6285788134245"]; // Owner utama - bypass bayar topup, nomor TIDAK muncul di menu
+global.admin = ["6281511132181"]; // Admin - harus bayar topup, nomor muncul di menu sebagai kontak
 global.no_bot = "6282349839745";
 global.packname = "Xyozi Store";
 global.author = "Xyozi Store";

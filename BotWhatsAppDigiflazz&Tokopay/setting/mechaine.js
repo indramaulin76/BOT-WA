@@ -188,7 +188,12 @@ const args = bodyText.split(/ +/).slice(1)
 const pushname = m.pushName || "-"
 const botNumber = await client.decodeJid(client.user.id)
 
-const isCreator = [botNumber, ...global.owner]
+const isCreator = [botNumber, ...global.owner, ...(global.admin || [])]
+.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net')
+.includes(m.sender)
+
+// isOwner = true hanya untuk nomor owner utama (bypass bayar topup)
+const isOwner = [botNumber, ...global.owner]
 .map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net')
 .includes(m.sender)
 
@@ -1234,12 +1239,14 @@ case 'y': {
 
     const userBalance = getMonUser(sender)
 
-    if (userBalance < transactionData.harga) {
-        fs.unlinkSync(transactionFile)
-        return m.reply('Saldo Kamu tidak mencukupi, silahkan ketik *.depo* untuk isi saldo.')
+    // Owner bypass cek saldo - langsung proses tanpa bayar
+    if (!isOwner) {
+        if (userBalance < transactionData.harga) {
+            fs.unlinkSync(transactionFile)
+            return m.reply('Saldo Kamu tidak mencukupi, silahkan ketik *.depo* untuk isi saldo.')
+        }
+        await moneyAdd(sender, transactionData.harga)
     }
-
-    await moneyAdd(sender, transactionData.harga)
 
     let topupffdata = {
         username: usernamekey,
