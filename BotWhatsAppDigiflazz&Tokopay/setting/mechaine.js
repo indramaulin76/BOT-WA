@@ -7160,7 +7160,12 @@ case 'antilink': {
 break;
 };           
 case 'p': case 'proses': {
-	if (!isGroup) return reply(mess.group)
+	if (!isGroup) {
+        if (isBanned) return;
+        const usedPrefix = prefix || '.';
+        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Menu Utama* ✦\n> ${usedPrefix}listtopup - List Harga Topup\n> ${usedPrefix}daftarharga - Daftar Harga Topup\n> ${usedPrefix}listlainnya - Menu Tambahan\n> ${usedPrefix}dashboard - Dashboard Anda\n> ${usedPrefix}upgrade - Upgrade Akun Anda\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
+        return client.sendMessage(m.chat, {caption: menuText, image: {url: "./gambar/bot.webp"} }, {quoted: m});
+    }
 	if (!isAdmins) return m.reply(mess.admin)
 	if (!m.quoted) return reply(`Reply pesanannya!`)
 	let proses = `── 「 *DETAIL PESANAN* 」 ──\n\n${m.quoted.text}\n\n> Status : Transaksi Diproses ♻️\n> Tanggal : ${tanggal}\n> Jam : ${wayah}\n\n*Pesanan ${m.quoted.sender.split("@")[0]} sedang di proses!, harap tunggu 1-10 Menit*`
@@ -7168,7 +7173,12 @@ case 'p': case 'proses': {
 break;
 };             
 case 'd': case 'done': {
-	if (!isGroup) return reply(mess.group)
+	if (!isGroup) {
+        if (isBanned) return;
+        const usedPrefix = prefix || '.';
+        const menuText = `*Halo ${pushname ? pushname : "Anon"} ${ucapanWaktu}.*\n*Ketik salah satu dari menu berikut untuk melihat apa yang kami tawarkan.*\n*Contoh : ${usedPrefix}listtopup*\n*Hanya tulis ${usedPrefix}listtopup tidak ada tambahan yang lainnya*\n\n✦ *Menu Utama* ✦\n> ${usedPrefix}listtopup - List Harga Topup\n> ${usedPrefix}daftarharga - Daftar Harga Topup\n> ${usedPrefix}listlainnya - Menu Tambahan\n> ${usedPrefix}dashboard - Dashboard Anda\n> ${usedPrefix}upgrade - Upgrade Akun Anda\n> ${usedPrefix}owner - Kontak Owner / CS\n\n✦ *Bantuan* ✦\n> WA Owner: wa.me/6281511132181`;
+        return client.sendMessage(m.chat, {caption: menuText, image: {url: "./gambar/bot.webp"} }, {quoted: m});
+    }
 	if (!isAdmins) return m.reply(mess.admin)
 	if (!m.quoted) return reply(`Reply pesanannya!`)
 	let sukses = `── 「 *DETAIL PESANAN* 」 ──\n\n${m.quoted.text}\n\n> Status : Transaksi Sukses ✅\n> Tanggal : ${tanggal}\n> Jam : ${wayah}\n\n*Pesanan ${m.quoted.sender.split("@")[0]} sudah sukses. Terima kasih sudah bertransaksi di Bangirul Store*`
